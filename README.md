@@ -6,3 +6,11 @@ Docker Glpi with Centos7 - PHP72 - Mariadb
 ### Introduction:
 
 Installation GLPI with docker and docker compose
+
+###CLI
+
+Download
+
+```
+docker pull 
+```
