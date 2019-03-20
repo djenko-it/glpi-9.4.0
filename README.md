@@ -31,7 +31,7 @@ Choiceyourpath - /docker/glpi/database:/var/lib/mysql | /docker/glpi/data:/var/w
 ```
 docker run --name choiceyourname --link yourdb:db -p 80:80 -d djenko/glpi
 ```
-### Volumes
+## Volumes:
 
 #### Docker Volumes
 
@@ -46,12 +46,10 @@ Locate all volumes
 ll /var/lib/docker/volumes/
 ```
 
-#### Data Host
-
 ### Exemple docker-compose with docker volumes
 
 ```
-#CENTOS HTTPD MARIADB PHP7.3
+#CENTOS HTTPD MARIADB PHP7.2
 
  dbmaria:
     image: mariadb:10.4
@@ -67,7 +65,7 @@ ll /var/lib/docker/volumes/
  glpiweb:
    images: djenko/glpi
    ports:
-     - "192.168.0.40:80:80"
+     - "80:80"
    volumes:
     - vhttpdconf:/etc/httpd/conf.d/
     - vhttpdlog:/var/log/httpd/
@@ -84,7 +82,7 @@ docker-compose up -d
 ### Exemple docker-compose with host folder
 
 ```
-#CENTOS HTTPD MARIADB PHP7.3
+#CENTOS HTTPD MARIADB PHP7.2
 
  dbmaria:
     image: mariadb:10.4
@@ -100,7 +98,7 @@ docker-compose up -d
  glpiweb:
    images: djenko/glpi
    ports:
-     - "192.168.0.40:80:80"
+     - "80:80"
    volumes:
     - /docker/glpi/httpd-conf:/etc/httpd/conf.d/
     - /docker/glpi/httpd-log:/var/log/httpd/
@@ -108,6 +106,7 @@ docker-compose up -d
    links:
      - dbmaria:mybase
 ```
+Run docker compose
 
 ```
 docker-compose up -d
