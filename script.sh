@@ -13,7 +13,7 @@ FOLDER_HTML=/var/www/html/
 
 if [ -d "${FOLDER_HTML}${FOLDER_GLPI})" ];
 then
-	echo "GLPI is already installed"
+	echo "Folder /var/www/html/glpi exists "
 else
 	wget -P ${FOLDER_HTML} ${SRC_GLPI}
   cd ${FOLDER_HTML}
