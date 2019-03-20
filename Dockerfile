@@ -24,6 +24,7 @@ RUN yum install -y wget
 RUN yum clean all -y
 
 EXPOSE 80
+EXPOSE 443
 
 ADD script.sh /script.sh
 ADD httpd.conf /opt
