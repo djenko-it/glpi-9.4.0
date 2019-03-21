@@ -18,7 +18,7 @@ else
 	wget -P ${FOLDER_HTML} ${SRC_GLPI}
   cd ${FOLDER_HTML}
 	tar -xzf ${TAR}
-	rm ${tar}
+	rm ${TAR}
   rm /etc/httpd/conf/httpd.conf
   cp /opt/httpd.conf /etc/httpd/conf/
   cp /opt/glpi.conf /etc/httpd/conf.d/
