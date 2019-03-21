@@ -16,7 +16,7 @@ docker pull djenko/glpi
 ```
 #### Without data
 ```
-docker run --name mariadb-glpi-d mariadb:10.4
+docker run --name mariadb-glpi -d mariadb:10.4
 docker run --name glpi --link mariadb-glpi:mariadb -p 80:80 -d djenko/glpi
 ```
 #### With data persistant (host folder)
